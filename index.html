@@ -7,7 +7,28 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="alphabet.js" type="module"></script>
+    <!-- need an input field which can toggle between english and morse, plus an output field for the result and a clear button -->
+
+    <main>
+      <div class="translator">
+        <h1>Morse Code Translator</h1>
+
+        <div>
+          <label>Input: <input type="text" class="input" /></label>
+        </div>
+
+        <div>
+          <button class="button">Translate</button>
+        </div>
+
+        <div>
+          <h2>Translation</h2>
+          <div class="output"> </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="alphabetMorse.js" type="module"></script>
     <script src="index.js" type="module"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-// Create two objects for alphabet and morse
+// Create two objects for alphabet and morse and export/import into index.js
 export const englishToMorse = {
   a: ".-",
   b: "-...",
