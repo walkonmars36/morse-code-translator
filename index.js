@@ -12,7 +12,7 @@ class Translator {
     if (typeof inputText === "string" && inputText.length > 0) {
       const inputTextLowerCase = inputText.toLowerCase();
       const inputTextArray = inputTextLowerCase.split("");
-      const inputTextTranslate = inputTextArray.map((char) => englishToMorse[char]);
+      const inputTextTranslate = inputTextArray.map((e) => englishToMorse[e]);
       const inputTextConcat = inputTextTranslate.join(" ");
       return inputTextConcat;
     } else {
@@ -24,7 +24,7 @@ class Translator {
     if (typeof inputMorse === "string" && inputMorse.length > 0) {
       const inputMorseLowerCase = inputMorse.toLowerCase();
       const inputMorseArray = inputMorseLowerCase.split(" ");
-      const inputMorseTranslate = inputMorseArray.map((char) => morseToEnglish[char]);
+      const inputMorseTranslate = inputMorseArray.map((e) => morseToEnglish[e]);
       const inputMorseConcat = inputMorseTranslate.join("");
       return inputMorseConcat;
     } else {
@@ -37,7 +37,8 @@ const translation = new Translator();
 
 const input = document.querySelector(".input");
 const output = document.querySelector(".output");
-const button = document.querySelector(".button");
+const translateBtn = document.querySelector(".translate-btn");
+const clearBtn = document.querySelector(".clear-btn");
 
 const getTranslation = () => {
   let getInputType = input.value;
@@ -47,10 +48,15 @@ const getTranslation = () => {
     output.innerHTML = translateToMorse;
   } else {
     const translateToEnglish = translation.getMorseToEnglish(getInputType);
-    output.innerHTML = translateToEnglish;
+    output.innerHTML = translateToEnglish.charAt(0).toUpperCase() + translateToEnglish.slice(1);
   }
 };
 
-button.addEventListener("click", () => {
+translateBtn.addEventListener("click", () => {
   getTranslation();
+});
+
+clearBtn.addEventListener("click", () => {
+  input.value = "";
+  output.innerHTML = "";
 });
