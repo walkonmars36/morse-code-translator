@@ -43,7 +43,7 @@ const clearBtn = document.querySelector(".clear-btn");
 const getTranslation = () => {
   let getInputType = input.value;
 
-  if (!/[^a-zA-Z]/.test(getInputType)) {
+  if (!/[^a-zA-Z ]/.test(getInputType)) {
     const translateToMorse = translation.getEnglishToMorse(getInputType);
     output.innerHTML = translateToMorse;
   } else {
