@@ -13,11 +13,19 @@ body {
   background-color: #0f1923;
 }
 
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: red;
   width: 50rem;
   max-width: 95%;
   margin: 0 auto;
@@ -32,7 +40,7 @@ p {
   flex-direction: column;
   align-items: center;
   background-color: #19222e;
-  border-radius: 0.5rem;
+  min-height: 100vh;
   padding: 1em;
 }
 
@@ -43,9 +51,9 @@ button {
   background-color: #0bc2d5;
   color: #0f1923;
   border: none;
-  padding: 1.5em 2em;
-  border-radius: 0.5em;
-  display: block;
+  padding: 1em 1.5em;
+  border-radius: 0.25em;
+  display: inline-block;
   width: 100%;
 }
 
@@ -70,11 +78,13 @@ button:focus {
 textarea {
   color: whitesmoke;
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   border: none;
   border-radius: 0.5rem;
   padding: 1em;
   background-color: #223040;
   resize: none;
   margin-top: 1rem;
+  width: 100%;
+  height: auto;
 }
