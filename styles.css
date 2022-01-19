@@ -13,6 +13,16 @@ body {
   background-color: #0f1923;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  width: 50rem;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
 p {
   margin-top: 1rem;
 }
@@ -23,9 +33,6 @@ p {
   align-items: center;
   background-color: #19222e;
   border-radius: 0.5rem;
-  /* width: 50rem; */
-  max-width: 95%;
-  margin: 0 auto;
   padding: 1em;
 }
 
@@ -38,6 +45,8 @@ button {
   border: none;
   padding: 1.5em 2em;
   border-radius: 0.5em;
+  display: block;
+  width: 100%;
 }
 
 button:hover,
@@ -47,10 +56,11 @@ button:focus {
 }
 
 .buttons {
-  display: flex;
+  /* display: flex;
+  flex-direction: column;
   gap: 1em;
-  padding: 1em;
-  align-items: center;
+
+  align-items: center; */
 }
 
 .output {
@@ -66,7 +76,5 @@ textarea {
   padding: 1em;
   background-color: #223040;
   resize: none;
-
-  max-width: 95%;
   margin-top: 1rem;
 }
